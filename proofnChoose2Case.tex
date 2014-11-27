@@ -1,0 +1,24 @@
+\textit{Existence:} Let $T = (T_1, T_2, \dots , T_d)$ be a permutation on $\binom{X}{k}$. We will construct a $\pi\in G$ such that $\pi\cdot T$ is a linear extension of $P$.
+
+\begin{enumerate}
+\item If $T_1 \neq \{1,2\}$, then let $p\in S_X$ be such that $p\cdot T_1 = \{1,2\}$.
+\item Let $\omega \equiv \min\{i\in[d]\setminus\{1\} : 1\in T_i\}$ and $\tau \equiv \min\{i\in[d]\setminus\{2\} : 2 \in T_i\}$. There are two cases to consider:
+    \begin{itemize}
+    \item $\mathbf{\omega < \tau:}$ Then let $q = (j\;3)$, so that $q \cdot T_\omega = \{1, 3\}$, where $j\in T_\omega$.
+    \item $\mathbf{\tau < \omega:}$ Then let $q = (1 \; 2)(3 \; h)$, so that $q \cdot T_\tau = \{1, 3\}$, where $h \in T_\tau$.
+    \end{itemize}
+Notice that in either case, the resulting permutation $q \cdot T$ has the property that $\{1,2\}$ is the minimum, and $\{1,3\} > S$, where $S\in A_2$.
+
+\item If $\{\{1, 2\}, \{1, 3\}, \dots , \{1, v\} \}$ is a subposet of $T$, then we are done. Otherwise, we can find a permutation $r\in S_X$ such that $r\cdot i_1 = \{1,2\} \prec r \cdot i_2 \prec \dots \prec r \cdot i_v = \{1, v\}$, where $i_j \in B$.
+\end{enumerate}
+
+We conclude that $(rqp) \cdot T$ is a linear extension of $P$.
+
+\textit{Uniqueness:} Let $L$ be a linear extension of $P$. Let $p \in S_X \setminus \{e\}$, where $e$ denotes the identity element in $S_X$. Without loss of generality, assume $p \cdot \{1, 2\} = \{1, 2\}$. (Otherwise, the resulting permutation $p\cdot L$ no longer has $\{1, 2\}$ in the first coordinate, so $p\cdot L$ cannot possibly be a linear extension of $P$.) We have two cases to consider:
+
+\begin{enumerate}
+\item Suppose $p(1) = 1$ and $p(2) = 2$. Since $L$ is a linear extension of $P$, then $\{1, 2\} \succ \{1, 3\} \succ \dots \succ \{1, v\}$ is a subposet of $L$. Since $p$ is a non-trivial permutation, $p$ cannot respect the ordering on this subposet, so $p\cdot L$ is not a linear extension of $P$.
+\item Suppose $p$ has the cycle $(1 \; 2)$. Observe that $\pi \cdot \{1, 3 \} = \{2, \pi(3)\}$ and $\pi \cdot \{2, j\} = \{1, 3\}$, for some $j\in\{2, 3, \dots, v-1\}$. Since $\{1,3\} \succ \{2, j\}$ is a covering relation in $P$, it follows that \[\pi \cdot \{1, 3\} = \{2, \pi(3)\} \not\succ \pi\cdot \{2, j\} = \{1, 3\}\] because $\pi(3) \neq 1$.
+\end{enumerate}
+
+We conclude that for any $\pi\in S_X \setminus\{e\}$, we have that $\pi \cdot L$ is not a linear extension of $P$.

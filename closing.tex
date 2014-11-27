@@ -1,0 +1,14 @@
+Here are some questions and remarks for further research:
+
+\begin{itemize}
+\item Notice that since $S_{\binom{X}{2}} \cong S_{\binom{X}{v - 2}}$, it follows that the lex--maximal fundamental region $\mathcal{F}_{\max}$ we constructed when $k = 2$ will also work when $k = v - 2$. As a result, we can consider $t$-designs with parameters $0 < t < v - 2 < v$, where $v \ge 4$. In particular, one may be able to formulate a combinatorial reciprocity theorem for a restricted class of BIBDs.
+
+\item Methods used in the proof of Theorem \ref{stronglyPure} could be employed to shed further light on the combinatorial structure of $\mathcal{F}_{\max}$, such as determining whether it is partitionable or shellable. (These two latter notions would need to be extended to fit our framework of partial polyhedral complexes.) Structural results of this kind  could yield a reciprocity theorem for the function counting the number of isomorphism types of $t$--designs.
+
+\item What is an inequality description for the boundary of $\mathcal{F}_{\max}$?
+\end{itemize}
+
+
+The proof of Theorem \ref{nChoose2Case} gives an algorithm for transforming a point $x$ in a full--dimensional face of the braid arrangement into $x^\prime$, a representative in the same $G$--orbit that is contained in the lex--maximal fundamental cell $\mathcal{F}_{\max}$. This algorithm runs in polynomial time, so it can be used to verify whether two points represent isomorphic $t$--designs.
+
+Observe that if we had such an algorithm for all points in $\RR^d$, then this algorithm would solve the graph isomorphism problem because $2$--dimensional faces of the braid arrangement have points that correspond to graphs. However, since the graph isomorphism problem is not expected to be polynomial--time computable, an inequality description of $\mathcal{F}_{\max}$ will be significantly more complex than our description of its interior in terms of order cones of posets.

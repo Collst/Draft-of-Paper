@@ -1,0 +1,28 @@
+The purpose of this article is two-fold. First, we prove that any collection of lexicographically smallest elements in their \(G\)-orbit has a property we refer to as \textit{strong purity}. Second, we exhibit a poset whose order cone bounds a fundamental domain for a certain group.
+
+Let $X = \{i_1, i_2, \dots , i_d\}$, with $i_1 \succ i_2 \succ \dots \succ i_d$, be a totally ordered set with $d$ elements. Let  $G \le S_X$ be a subgroup acting on $\RR^X$ by permuting coordinates. In other words, for any $\pi \in G$, \[\pi \cdot x \equiv (x_{\pi^{-1}(i_1)}, x_{\pi^{-1}(i_2)}, \dots , x_{\pi^{-1}(i_d)}),\] where $x = (x_{i_1}, x_{i_2}, \dots , x_{i_d})\in\RR^X$.
+
+\begin{defn}
+Let $\mathcal{F} \subseteq \RR^d$ and $G$ be a finite group acting on $\RR^d$ by permuting coordinates. Suppose that for every $x\in\RR^d$, the equality $\vert x^G \cap \mathcal{F}\vert = 1$ holds, where \(x^G\) denotes the \(G\)-orbit of \(x\).
+
+We call $\mathcal{F}$ a \textbf{fundamental domain} for \(G\).
+\end{defn}
+
+An alternative way of defining a fundamental region is as a subset of $\RR^d$ satisfying the following two properties: \begin{enumerate}
+\item For every $x\in\mathcal{F}$ and $\pi \in G\backslash\{e\}$, where $e$ denotes the identity of $G$, we have that $\pi \cdot x \notin \mathcal{F}$;
+\item For every $x\in\RR^X$, there exists $\pi \in G$ such that $\pi \cdot x \in \mathcal{F}$.
+\end{enumerate} %We will refer to the first property as $\boldsymbol G$-\textbf{uniqueness}, and the latter one as $\boldsymbol G$-\textbf{existence}.
+
+We introduce a partition of $\RR^d$ we will use often:
+
+\begin{defn}[\cite{hyperplaneArrg}]
+For $i, j \in [d]$, with $i \neq j$, let $H_{ij} = \{x\in\RR^d : x_i - x_j = 0; 1 \le i < j \le d \}$. The \textbf{braid arrangement}, denoted $\mathcal{B}_d$, on $\RR^d$ is the set \[\mathcal{B}_d = \{H_{ij} : 1 \le i < j \le n \}.\]
+\end{defn}
+
+The braid arrangement $\mathcal{B}_d$ induces a collection of cones, and their relative interiors form a partition of $\RR^d$ \cite[p. 192]{ziegler}. Let $\mathcal{T}_d$ denote the collection of these regions.
+
+\begin{defn}
+Let $F$ be a subset of $\mathcal{T}_d$. For any $z$ in the relative interior of $F$, define \begin{eqnarray*} I_z &\equiv &\{(i,j) \in [d]^2 : i \neq j; z_i - z_j > 0 \},\\ E_z &\equiv &\{(i,j) \in [d]^2 : i \neq j; z_i - z_j = 0\}. \end{eqnarray*} If all pairs of coordinates fall in either $I_z$ or $E_z$, then we call $F$ a \textbf{face} of $\mathcal{T}_d$, in which case we say that $F$ is a face of the braid arrangement.
+\end{defn}
+
+This paper is organized as follows. In the next section, we introduce the fundamental domain we wish to study, which we denote \(\mathcal{F}_{\max}\), and prove some of its properties. In Section \ref{purity}, we prove that such a fundamental domain possess a property called strong purity. In Section \ref{system}, we work with a specific fundamental domain \(\mathcal{F}_{\max}\) for which we are able to construct a poset whose order cone yields a system of linear inequalities for the interior of \(\mathcal{F}_{\max}\).
